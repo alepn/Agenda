@@ -37,6 +37,12 @@ int main(void) {
     scanf("%i", &op);
   }
 
+  //Funcionalidade de listar todos os contatos
+  for(i = 0; i < 2; i++){
+    printf("%i", contatos[i].codigo);
+    printf("%s", contatos[i].nome);
+  }
+
   return 0;
 
 }
