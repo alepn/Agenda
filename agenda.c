@@ -17,7 +17,7 @@ int main(void)
 {
 
   Pessoa contatos[TAM_AGENDA];
-  int i;
+  int i, buscarCodigo;
 
   //Cadastrar
   for(i = 0; i < TAM_AGENDA; i++){
@@ -38,6 +38,21 @@ int main(void)
 
     printf("Nome: ");
     printf("%s\n", contatos[i].nome);
+
+  }
+
+  //Buscar
+  printf("Digite um código para buscar: ");
+  scanf("%i", &buscarCodigo);
+  for(i = 0; i < TAM_AGENDA; i++){
+    
+    if(buscarCodigo == contatos[i].codigo){
+      printf("Código: ");
+      printf("%i\n", contatos[i].codigo);
+
+      printf("Nome: ");
+      printf("%s\n", contatos[i].nome);
+    }
 
   }
 
