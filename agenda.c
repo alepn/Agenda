@@ -56,5 +56,20 @@ int main(void)
 
   }
 
+  //Alterar
+  printf("Digite um código para alterar: ");
+  scanf("%i", &buscarCodigo);
+  for(i = 0; i < TAM_AGENDA; i++){
+    
+    if(buscarCodigo == contatos[i].codigo){
+      printf("Código: ");
+      printf("%i\n", contatos[i].codigo);
+
+      printf("Nome: ");
+      printf("%s\n", contatos[i].nome);
+    }
+
+  }
+
   return 0;
 }
