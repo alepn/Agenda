@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define TAM_AGENDA 10
+#define TAM_AGENDA 2
 
 typedef struct Pessoa
 {
@@ -17,14 +17,27 @@ int main(void)
 {
 
   Pessoa contatos[TAM_AGENDA];
+  int i;
 
-  for(int i = 0; i < TAM_AGENDA; i++){
+  //Cadastrar
+  for(i = 0; i < TAM_AGENDA; i++){
 
     printf("Digite o código: ");
     scanf("%i", &contatos[i].codigo);
 
     printf("Digite o nome: ");
     scanf("%s", contatos[i].nome);
+
+  }
+
+  //Listar
+  for(i = 0; i < TAM_AGENDA; i++){
+
+    printf("Código: ");
+    printf("%i\n", contatos[i].codigo);
+
+    printf("Nome: ");
+    printf("%s\n", contatos[i].nome);
 
   }
 
